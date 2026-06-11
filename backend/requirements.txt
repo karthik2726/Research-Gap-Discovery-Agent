@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+pydantic
+langchain
+langchain-core
+langchain-community
+langchain-groq
+langgraph
+chromadb
+pymupdf
+pdfplumber
+python-multipart
+sqlalchemy
+python-dotenv
+openai
+tiktoken
