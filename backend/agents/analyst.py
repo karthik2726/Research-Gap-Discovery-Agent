@@ -33,7 +33,7 @@ def analyst_node(state: AgentState) -> Dict[str, Any]:
     analyses = {}
     for filename, text in state["paper_texts"].items():
         # Truncate text to avoid context limits if necessary
-        truncated_text = text[:30000] # roughly 6000-8000 tokens
+        truncated_text = text[:100000] # roughly 20000-25000 tokens
         try:
             res = chain.invoke({"text": truncated_text})
             analyses[filename] = res

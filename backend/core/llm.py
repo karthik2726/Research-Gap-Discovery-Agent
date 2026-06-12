@@ -8,7 +8,7 @@ def get_llm() -> BaseChatModel:
         from langchain_groq import ChatGroq
         return ChatGroq(
             temperature=0.2, 
-            model_name="llama3-8b-8192", 
+            model_name="llama-3.1-8b-instant", 
             groq_api_key=os.getenv("GROQ_API_KEY")
         )
     elif provider == "ollama":
@@ -21,7 +21,7 @@ def get_llm() -> BaseChatModel:
     elif provider == "openai":
         from langchain_openai import ChatOpenAI
         return ChatOpenAI(
-            model="gpt-3.5-turbo",
+            model="gpt-4o-mini",
             temperature=0.2,
             api_key=os.getenv("OPENAI_API_KEY")
         )
